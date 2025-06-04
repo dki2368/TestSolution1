@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "參與銀行查詢";
+}
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.css" />
+}
+<div>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>信用卡公司</th>
+                <th>回饋 / 名額</th>
+                <th>五倍券優惠活動</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>兆豐銀行</td>
+                <td>$300 產品（限量8萬名）<br>最高5千抽獎</td>
+                <td>期限綁定台灣Pay/信用卡，可享一次抽獎，最高獎金5千元(110/12/31前)</td>
+            </tr>
+            <tr>
+                <td>永豐銀行</td>
+                <td>$300 產品（限量8萬名）<br>最高5千抽獎</td>
+                <td>期限綁定台灣Pay/信用卡，可享一次抽獎，最高獎金5千元(110/12/31前)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.js"></script>
+    <script src="~/js/bankList.js" asp-append-version="true"></script>
+}
