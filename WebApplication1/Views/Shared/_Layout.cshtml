@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex">
+        <nav class="flex-column bg-light vh-100 mx-5">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item nav-item-style text-start">
+                    <a class="decoration-none block" asp-area="" asp-controller="Home" asp-action="Privacy">回入口網</a>
+                </li>
+                <li class="nav-item nav-item-style text-start">
+                    <a class="decoration-none block" asp-area="" asp-controller="Home" asp-action="Index"><b>測試標題</b></a>
+                    <ul class="list-style-none nav-sub-menu no-padding">
+                        <li class="nav-sub-item"><a class="decoration-none block" asp-area="" asp-controller="Home" asp-action="Privacy">測試副選單</a></li>
+                        <li class="nav-sub-item"><a class="decoration-none block">測試副選單八字版</a></li>
+                        <li class="nav-sub-item"><a class="decoration-none block">測試副選單</a></li>
+                        <li class="nav-sub-item"><a class="decoration-none block">測試副選單</a></li>
+                        <li class="nav-sub-item"><a class="decoration-none block">測試副選單</a></li>
+                        <li class="nav-sub-item"><a class="decoration-none block">測試副選單</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-style text-start">
+                    <a class="decoration-none block" asp-area="" asp-controller="Home" asp-action="Privacy">測試標題</a>
+                </li>
+                <li class="nav-item nav-item-style text-start">
+                    <a class="decoration-none block" asp-area="" asp-controller="Home" asp-action="Privacy">超級長的測試標題</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex-grow-1 d-flex flex-column">
+            <main role="main" class="flex-grow-1 p-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
