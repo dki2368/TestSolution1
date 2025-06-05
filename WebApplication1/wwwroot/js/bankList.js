@@ -1,5 +1,7 @@
-﻿$(document).ready(function () {
+﻿$(() => {
     $('#table_id').DataTable({
+        pagingType: 'simple_numbers',
+        info: false,
         language: {
             "lengthMenu": "顯示 _MENU_ 筆資料",
             "sProcessing": "處理中...",
@@ -14,10 +16,8 @@
             "sLoadingRecords": "載入資料中...",
             "sInfoThousands": ",",
             "oPaginate": {
-                "sFirst": "首頁",
                 "sPrevious": "上一頁",
                 "sNext": "下一頁",
-                "sLast": "末頁"
             },
             "order": [[0, "desc"]],
             "oAria": {

@@ -1,0 +1,66 @@
+﻿/*.title-color {
+    color: #006845;
+}*/
+
+/*--- DataTables ---*/
+.dt-layout-full {
+    margin-top: 1.5rem;
+}
+
+.display {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table.dataTable th.dt-type-numeric div.dt-column-header {
+    flex-direction: row;
+}
+
+table.dataTable thead > tr {
+    color: white;
+    background-color: #518772;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover {
+    outline: none;
+}
+
+.dt-column-header {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    text-wrap: nowrap;
+}
+
+.display tbody {
+    background-color: #eff8f4;
+}
+
+.display tbody tr:hover {
+    background-color: #e4ede9;
+}
+
+.display tbody td {
+    padding: 0.75rem;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+table.dataTable td.dt-type-numeric, .display tbody > tr > td:last-child {
+    text-align: center;
+}
+
+.bi-check-circle {
+    color: green;
+}
+
+.display tbody tr:hover .bi-check-circle {
+    color: darkgreen;
+}
+
+.bi-x-circle {
+    color: red;
+}
+
+.display tbody tr:hover .bi-x-circle {
+    color: #e70000;
+}
